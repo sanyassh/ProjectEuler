@@ -330,14 +330,38 @@ def int_sqrt(n):
     sqrt >>= 1
     temp = sqrt >> 1
     while temp:
-        if (sqrt + temp) ** 2 <= n:
+        if pow(sqrt + temp, 2) <= n:
+            sqrt += temp
+        temp >>= 1
+    return sqrt
+
+
+def int_cbrt(n):
+    sqrt = 1
+    sqr = 1
+    while sqr <= n:
+        sqrt <<= 1
+        sqr <<= 3
+    sqrt >>= 1
+    temp = sqrt >> 1
+    while temp:
+        if pow(sqrt + temp, 3) <= n:
             sqrt += temp
         temp >>= 1
     return sqrt
 
 
 def is_square(n):
-    return int_sqrt(n) ** 2 == n
+    if n > SQRT_LIMIT:
+        while not n & 3:
+            n >>= 2
+        if not n & 1:
+            return False
+    return pow(int_sqrt(n), 2) == n
+
+
+def is_cube(n):
+    return pow(int_cbrt(n), 3) == n
 
 
 def totient(n, prime_lst):
@@ -396,3 +420,19 @@ def square_fraction(n, length):
         if current_length > length:
             break
     return lst
+
+
+def max_sum_sub_sequence(sequence):
+    old_start, old_end, max_sum, new_start, new_end, temp_sum = 0, 0, 0, 0, 0, 0
+    for i, n in enumerate(sequence, start=1):
+        new_sum = temp_sum + n
+        if new_sum <= 0:
+            new_start, new_end = i, i
+            temp_sum = 0
+        else:
+            new_end += 1
+            temp_sum = new_sum
+        if temp_sum > max_sum:
+            max_sum = temp_sum
+            old_start, old_end = new_start, new_end
+    return old_start, old_end, max_sum
