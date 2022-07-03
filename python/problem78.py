@@ -3,6 +3,7 @@ import array
 
 ANSWER = 55374
 DIVISOR = 10 ** 6
+SLOW = True
 
 
 def main():

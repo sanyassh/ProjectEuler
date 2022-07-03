@@ -1,6 +1,8 @@
 import string
 import itertools
 
+import euler
+
 
 ANSWER = 129448
 
@@ -23,7 +25,7 @@ def is_word(word):
 
 
 def main():
-    lst = [int(n) for n in open('../txt/problem059.txt').readline().split(',')]
+    lst = [int(n) for n in euler.data(__file__)[0].split(',')]
     spaces = len(lst) // 10
     keyset = [ord(s) for s in string.ascii_lowercase]
     for key in itertools.product(keyset, repeat=3):

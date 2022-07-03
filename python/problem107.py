@@ -1,5 +1,7 @@
 import math
 
+import euler
+
 
 ANSWER = 259679
 
@@ -38,7 +40,7 @@ def connect(lst, s):
 def main():
     lst = [
         [0 if n == '-' else int(n) for n in line[:-1].split(',')]
-        for line in open('../txt/problem107.txt')
+        for line in euler.data(__file__)
     ]
     leng = len(lst)
     i, j = shortest_edge(lst)

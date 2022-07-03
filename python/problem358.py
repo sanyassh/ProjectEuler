@@ -2,6 +2,7 @@ import euler
 
 
 ANSWER = 3284144505
+SLOW = True
 
 
 def main():

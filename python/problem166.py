@@ -2,6 +2,7 @@ import itertools
 
 
 ANSWER = 7130034
+SLOW = True
 
 
 def main():

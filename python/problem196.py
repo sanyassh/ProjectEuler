@@ -5,6 +5,7 @@ ANSWER = 322303240771079935
 LIMIT = 7208785
 LIMIT2 = 5678027
 PRIME_LIST = euler.prime_list(LIMIT)
+SLOW = True
 
 
 def start_of_row(n):

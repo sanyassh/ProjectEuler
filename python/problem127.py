@@ -3,6 +3,7 @@ import euler
 
 ANSWER = 18407904
 LIMIT = 120000
+SLOW = True
 
 
 def main():
@@ -19,8 +20,6 @@ def main():
     for i_c, c in enumerate(square_divisibles):
         if c >= LIMIT:
             break
-        if c % 1000 == 0:
-            print(c)
         c_2 = c // 2
         d = c / rads[c]
         for i_b in range(i_c - 1, -1, -1):

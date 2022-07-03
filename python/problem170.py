@@ -5,6 +5,7 @@ import euler
 
 ANSWER = 9857164023
 DIVISORS_DICT = {}
+SLOW = True
 
 
 def number(permutation):

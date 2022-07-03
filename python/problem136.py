@@ -1,5 +1,6 @@
 ANSWER = 2544559
 LIMIT = 50 * 10 ** 6
+SLOW = True
 
 
 def main():

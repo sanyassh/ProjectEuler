@@ -1,10 +1,12 @@
+import euler
+
 ANSWER = 427337
 
 
 def main():
     lst = [
         [int(i) for i in line[:-1].split(',')]
-        for line in open('../txt/problem081.txt')
+        for line in euler.data(__file__)
     ]
     length = len(lst)
     way = [[0 for _ in range(length)] for _ in range(length)]

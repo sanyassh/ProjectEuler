@@ -3,6 +3,7 @@ import euler
 
 ANSWER = 1677366278943
 LIMIT = 40 * 10 ** 6
+SLOW = True
 
 
 def main():

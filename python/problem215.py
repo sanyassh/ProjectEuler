@@ -1,8 +1,6 @@
 ANSWER = 806844323190414
-
-
-LENGTH = 9
-HEIGHT = 3
+LENGTH = 32
+HEIGHT = 10
 
 
 def build_walls():

@@ -1,5 +1,7 @@
 import copy
 
+import euler
+
 
 ANSWER = 24702
 
@@ -167,7 +169,7 @@ def correct(sudoku):
 
 def main():
     result = 0
-    lines = open('../txt/problem096.txt').readlines()
+    lines = euler.data(__file__)
     for n in range(len(lines) // 10):
         sudoku = load(n, lines)
         solution = solve(sudoku)

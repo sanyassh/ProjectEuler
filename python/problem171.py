@@ -4,6 +4,7 @@ import euler
 ANSWER = 142989277
 LIMIT = 20
 LIMIT1 = LIMIT + 1
+SLOW = True
 
 
 REPUNITS = [0]

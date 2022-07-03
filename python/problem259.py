@@ -1,4 +1,5 @@
 ANSWER = 20101196798
+SLOW = True
 
 
 class MyFraction:

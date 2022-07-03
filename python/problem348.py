@@ -2,6 +2,7 @@ import collections
 
 
 ANSWER = 1004195061
+SLOW = True
 
 
 def main():

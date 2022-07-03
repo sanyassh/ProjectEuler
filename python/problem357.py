@@ -5,6 +5,7 @@ ANSWER = 1739023853137
 LIMIT = 10 ** 8
 LIMIT2 = LIMIT + 2
 PRIME_LIST = euler.prime_list_with_zeros(LIMIT2)
+SLOW = True
 
 
 def check(n):

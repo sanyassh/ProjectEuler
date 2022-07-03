@@ -1,10 +1,13 @@
+import euler
+
+
 ANSWER = 7273
 
 
 def main():
     lst = [
-        [int(i) for i in l.split()]
-        for l in open('../txt/problem067.txt')
+        [int(i) for i in line.split()]
+        for line in euler.data(__file__)
     ]
     maximum = lst[0]
     for i in range(1, len(lst)):

@@ -3,6 +3,7 @@ import array
 
 ANSWER = 17427258
 LIMIT = 10 ** 8
+SLOW = True
 
 
 def prime_factors_count(n):

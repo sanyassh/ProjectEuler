@@ -1,5 +1,7 @@
 import collections
 
+import euler
+
 
 ANSWER = 18769
 
@@ -31,7 +33,7 @@ def form(square, word1, word2):
 
 
 def main():
-    lst = open('../txt/problem098.txt').readline()[1:-1].split('","')
+    lst = euler.data(__file__)[0][1:-1].split('","')
 
     word_dict = collections.defaultdict(list)
     for word in lst:

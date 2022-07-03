@@ -4,6 +4,7 @@ import euler
 ANSWER = 61614848
 LIMIT = 25 * 10 ** 6
 DIVISORS_LIST = euler.divisors_list(LIMIT // 3)
+SLOW = True
 
 
 def divisors_of_n2_minus_1(n):

@@ -45,9 +45,9 @@ def prepare_fraction_sets():
             indices_lst = new_indices_lst
             sums = new_sums
     fractions_set = {n: [] for n in sets}
-    for n in sets:
-        for lst in sets[n]:
-            fractions_set[n].append({FRACTIONS[i * n] for i in lst})
+    for n, indices_lst in sets.items():
+        for indices in indices_lst:
+            fractions_set[n].append({FRACTIONS[i * n] for i in indices})
     return fractions_set
 
 

@@ -5,6 +5,7 @@ import euler
 
 ANSWER = 785478606870985
 LIMIT = 10 ** 16
+SLOW = True
 
 
 def main():

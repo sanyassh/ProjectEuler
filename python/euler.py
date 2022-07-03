@@ -1,10 +1,15 @@
+"""
+SLOW = True - mark for problem solutions that run slower than 10 seconds
+"""
+
+
 import array
 import functools
 import math
 import operator
+import os
+import re
 import string
-
-import deprecation
 
 
 SQRT_LIMIT = 10 ** 14
@@ -13,6 +18,16 @@ SQRT_LIMIT = 10 ** 14
 FACTORIALS = [1]
 for _ in range(1, 1001):
     FACTORIALS.append(FACTORIALS[-1] * _)
+
+
+def data(filename):
+    number = re.search(r'problem(?P<number>(\d)*).py', filename).group('number')
+    number = '0' * (3 - len(number)) + number
+    data_path = os.path.abspath(
+        os.path.join(__file__, '..', '..', 'txt', f'problem{number}.txt')
+    )
+    with open(data_path, encoding='utf-8') as file:
+        return file.readlines()
 
 
 # divisors
@@ -225,8 +240,8 @@ def prime_cycle_length(prime):
 # pythagorean
 
 
-@deprecation.deprecated(details='Doesnt produce all triplets')
 def pythagorean_trio(a):
+    """Doesn't produce all triplets"""
     a_2 = a * a
     for b in range(1, a):
         b_2 = b * b

@@ -1,5 +1,7 @@
 import math
 
+import euler
+
 
 ANSWER = 425185
 
@@ -26,7 +28,7 @@ def iterate(lst, way):
 def main():
     lst = [
         [int(i) for i in line[:-1].split(',')]
-        for line in open('../txt/problem083.txt')
+        for line in euler.data(__file__)
     ]
     length = len(lst)
     way = [[math.inf for _ in range(length)] for _ in range(length)]

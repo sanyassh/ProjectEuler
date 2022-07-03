@@ -8,7 +8,7 @@ NUMBERS = 4
 def main():
     lst = [
         [int(item) for item in line.split()]
-        for line in open('../txt/problem011.txt')
+        for line in euler.data(__file__)
     ]
     length = len(lst)
     maximum = 0

@@ -5,6 +5,7 @@ ANSWER = '5a411d7b'
 DIGITS = string.digits + string.ascii_lowercase
 BASE = 14
 LIMIT = 10 ** 4
+SLOW = True
 
 
 def transform(n, base):

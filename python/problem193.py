@@ -3,6 +3,7 @@ import euler
 
 ANSWER = 684465067343069
 POWER = 50
+SLOW = True
 
 
 def main():

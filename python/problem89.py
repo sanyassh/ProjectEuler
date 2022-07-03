@@ -1,3 +1,6 @@
+import euler
+
+
 ANSWER = 743
 
 ROMAN_TO_TEN_MAPPING = {
@@ -63,7 +66,7 @@ def ten_to_roman(n):
 def main():
     return sum(
         len(line) - len(ten_to_roman(roman_to_ten(line)))
-        for line in (line[:-1] for line in open('../txt/problem089.txt'))
+        for line in (line[:-1] for line in euler.data(__file__))
     )
 
 

@@ -1,5 +1,7 @@
 import itertools
 
+import euler
+
 
 ANSWER = 13938
 
@@ -11,7 +13,7 @@ def except_one(lst):
 def main():
     matrix = [
         [int(n) for n in line.split()]
-        for line in open('../txt/problem345.txt')
+        for line in euler.data(__file__)
     ]
     length = len(matrix)
     indices = [[] for _ in range(length)]

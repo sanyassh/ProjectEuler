@@ -1,5 +1,6 @@
 ANSWER = 1884161251122450
 LIMIT = 150000
+SLOW = True
 
 
 def main():

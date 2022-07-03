@@ -1,6 +1,8 @@
 import collections
 import math
 
+import euler
+
 
 ANSWER = 228
 
@@ -28,7 +30,7 @@ def contains(p_1, p_2, p_3, p):
 def main():
     lst = [
         [int(c) for c in line.split(',')]
-        for line in open('../txt/problem102.txt')
+        for line in euler.data(__file__)
     ]
     total = 0
     zero = Point(0, 0)

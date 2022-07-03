@@ -6,7 +6,8 @@ SLOW = True
 def brute_force():
     total = 0
     for n in range(4, LIMIT // 3 + 3, 2):
-        p_1, p_2 = 3 * n + 2, 3 * n - 2
+        p_1 = 3 * n + 2
+        p_2 = p_1 - 4
         c_1, c_2 = p_1 * (n + 2), p_2 * (n - 2)
         if c_1 == round(c_1 ** 0.5) ** 2:
             total += p_1

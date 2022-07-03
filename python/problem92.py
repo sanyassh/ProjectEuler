@@ -1,5 +1,6 @@
 ANSWER = 8581146
 LIMIT = 10 ** 7
+SLOW = True
 
 
 def square(n):

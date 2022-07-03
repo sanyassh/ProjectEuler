@@ -1,10 +1,13 @@
 import euler
 
 
+ANSWER = 1096883702440585
 PRIME_LIST = euler.prime_list(190)
 LIMIT = euler.product(PRIME_LIST)
 SQRT = euler.int_sqrt(LIMIT)
 GLOBAL = {'result': 0}
+SLOW = True
+INFINITE = True
 
 
 def work(number, product, index):

@@ -3,6 +3,7 @@ import euler
 
 ANSWER = 0
 LIMIT = 10 ** 16
+SLOW = True
 
 
 def main():

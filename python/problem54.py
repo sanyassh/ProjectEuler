@@ -1,3 +1,6 @@
+import euler
+
+
 ANSWER = 376
 RANKS = ''.join(str(i) for i in range(10)) + 'TJQKA'
 
@@ -64,9 +67,8 @@ def get_strength(hand):
 
 
 def main():
-    lst = open('../txt/problem054.txt')
     count = 0
-    for hands in lst:
+    for hands in euler.data(__file__):
         cards = hands.split()
         hand1 = cards[:5]
         hand2 = cards[5:]

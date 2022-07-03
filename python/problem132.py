@@ -3,6 +3,7 @@ import euler
 
 ANSWER = 843296
 LIMIT = 10 ** 9
+SLOW = True
 
 
 def find(n):

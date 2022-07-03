@@ -1,3 +1,5 @@
+import euler
+
 ANSWER = 260324
 
 
@@ -17,7 +19,7 @@ def iterate(lst, way, n):
 def main():
     lst = [
         [int(i) for i in line[:-1].split(',')]
-        for line in open('../txt/problem082.txt')
+        for line in euler.data(__file__)
     ]
     length = len(lst)
     way = [[0 for _ in range(length)] for _ in range(length)]
@@ -27,7 +29,7 @@ def main():
         for j in range(length):
             way[j][i] = way[j][i - 1] + lst[j][i]
         iterate(lst, way, i)
-    return min([k[-1] for k in way])
+    return min(k[-1] for k in way)
 
 
 if __name__ == '__main__':

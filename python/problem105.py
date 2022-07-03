@@ -1,5 +1,7 @@
 import itertools
 
+import euler
+
 
 ANSWER = 73702
 
@@ -22,7 +24,7 @@ def check(s):
 def main():
     lst = [
         sorted([int(n) for n in line.split(',')], reverse=True)
-        for line in open('../txt/problem105.txt')
+        for line in euler.data(__file__)
     ]
     total = 0
     for s in lst:

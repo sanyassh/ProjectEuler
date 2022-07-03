@@ -3,6 +3,7 @@ import euler
 
 ANSWER = 4037526
 LIMIT = 5 * 10 ** 15
+SLOW = True
 
 
 def main():
